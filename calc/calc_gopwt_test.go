@@ -1,12 +1,13 @@
 package calc_test
 
 import (
-	. "github.com/bmuschko/go-testing-frameworks/calc"
-	. "github.com/ToQoz/gopwt/assert"
-	. "github.com/ToQoz/gopwt"
-	"testing"
 	"flag"
+	"go-test-framework-example/calc"
 	"os"
+	"testing"
+
+	. "github.com/ToQoz/gopwt"
+	. "github.com/ToQoz/gopwt/assert"
 )
 
 func TestMain(m *testing.M) {
@@ -16,21 +17,21 @@ func TestMain(m *testing.M) {
 }
 
 func TestAddWithGopwt(t *testing.T) {
-	result := Add(1, 2)
+	result := calc.Add(1, 2)
 	OK(t, 3 == result)
 }
 
 func TestSubtractWithGopwt(t *testing.T) {
-	result := Subtract(5, 3)
+	result := calc.Subtract(5, 3)
 	OK(t, 2 == result)
 }
 
 func TestMultiplyWithGopwt(t *testing.T) {
-	result := Multiply(5, 6)
+	result := calc.Multiply(5, 6)
 	OK(t, 30 == result)
 }
 
 func TestDivideWithGopwt(t *testing.T) {
-	result := Divide(10, 2)
+	result := calc.Divide(10, 2)
 	OK(t, float64(5) == result)
 }

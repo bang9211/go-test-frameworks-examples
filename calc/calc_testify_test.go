@@ -1,27 +1,28 @@
 package calc_test
 
 import (
-	. "github.com/bmuschko/go-testing-frameworks/calc"
-	. "github.com/stretchr/testify/assert"
+	"go-test-framework-example/calc"
 	"testing"
+
+	. "github.com/stretchr/testify/assert"
 )
 
 func TestAddWithTestify(t *testing.T) {
-	result := Add(1, 2)
+	result := calc.Add(1, 2)
 	Equal(t, 3, result)
 }
 
 func TestSubtractWithTestify(t *testing.T) {
-	result := Subtract(5, 3)
+	result := calc.Subtract(5, 3)
 	Equal(t, 2, result)
 }
 
 func TestMultiplyWithTestify(t *testing.T) {
-	result := Multiply(5, 6)
+	result := calc.Multiply(5, 6)
 	Equal(t, 30, result)
 }
 
 func TestDivideWithTestify(t *testing.T) {
-	result := Divide(10, 2)
+	result := calc.Divide(10, 2)
 	Equal(t, float64(5), result)
 }

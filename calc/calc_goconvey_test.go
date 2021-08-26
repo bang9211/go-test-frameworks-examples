@@ -1,9 +1,10 @@
 package calc_test
 
 import (
-	. "github.com/bmuschko/go-testing-frameworks/calc"
-	. "github.com/smartystreets/goconvey/convey"
+	"go-test-framework-example/calc"
 	"testing"
+
+	. "github.com/smartystreets/goconvey/convey"
 )
 
 func TestAddWithGoConvey(t *testing.T) {
@@ -12,7 +13,7 @@ func TestAddWithGoConvey(t *testing.T) {
 		y := 2
 
 		Convey("should produce the expected result", func() {
-			So(Add(x, y), ShouldEqual, 3)
+			So(calc.Add(x, y), ShouldEqual, 3)
 		})
 	})
 }
@@ -23,7 +24,7 @@ func TestSubtractWithGoConvey(t *testing.T) {
 		y := 3
 
 		Convey("should produce the expected result", func() {
-			So(Subtract(x, y), ShouldEqual, 2)
+			So(calc.Subtract(x, y), ShouldEqual, 2)
 		})
 	})
 }
@@ -34,7 +35,7 @@ func TestMultiplyWithGoConvey(t *testing.T) {
 		y := 6
 
 		Convey("should produce the expected result", func() {
-			So(Multiply(x, y), ShouldEqual, 30)
+			So(calc.Multiply(x, y), ShouldEqual, 30)
 		})
 	})
 }
@@ -45,7 +46,7 @@ func TestDivideWithGoConvey(t *testing.T) {
 		y := 2
 
 		Convey("should produce the expected result", func() {
-			So(Divide(x, y), ShouldEqual, float64(5))
+			So(calc.Divide(x, y), ShouldEqual, float64(5))
 		})
 	})
 }
